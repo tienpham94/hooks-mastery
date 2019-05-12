@@ -1,7 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 const App = () => {
   const [name, setName] = useState("")
+
+  useEffect(() => {
+    document.title = name
+  })
+
   return (
     <div className="main-wrapper">
       <h1>Level Up Dishes</h1>
@@ -9,7 +14,6 @@ const App = () => {
       <form
         onSubmit={e => {
           e.preventDefault()
-          formSubmit()
         }}
       >
         <input
@@ -20,10 +24,6 @@ const App = () => {
       </form>
     </div>
   )
-}
-
-const formSubmit = () => {
-  console.log("submit")
 }
 
 export default App
