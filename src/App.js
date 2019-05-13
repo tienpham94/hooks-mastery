@@ -8,7 +8,9 @@ const App = () => {
 
   return (
     <div className="main-wrapper" ref={ref}>
-      <h1>Level Up Dishes</h1>
+      <h1 onClick={() => ref.current.classList.add("new-class")}>
+        Level Up Dishes
+      </h1>
       <h3>{name}</h3>
       <form
         onSubmit={e => {
