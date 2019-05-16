@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react';
 
-export const useTitleInput = initialValue => {
-  const [value, setValue] = useState(initialValue)
-
+function useTitleInput(initialValue) {
+  const [value, setValue] = useState(initialValue);
   useEffect(() => {
-    document.title = value
-  })
-  return [value, setValue]
+    document.title = value;
+  });
+  return [value, setValue];
 }
+
+export { useTitleInput };
